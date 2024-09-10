@@ -1,61 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercise One</title>
 
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#box-model">Box Model</a></li>
-                <li><a href="#flexbox">Flexbox</a></li>
-                <li><a href="#positioning-elements">Positioning Elements</a></li>
-                <li><a href="#heading-usage">Heading Usage</a></li>
-                <li><a href="#simple-javascript">Simple Javascript</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="#box-model">Box Model</a></li>
+          <li><a href="#flexbox">Flexbox</a></li>
+          <li><a href="#positioning-elements">Positioning Elements</a></li>
+          <li><a href="#heading-usage">Heading Usage</a></li>
+          <li><a href="#simple-javascript">Simple Javascript</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <section class="bm-section" id="box-model">
-            <div class="bm-wrapper">
-                <h1>CSS Box Model</h1>
-                <p>
-                    /* Padding is inside of the element in CSS */<br>
-                    <b>padding: 40px;</b><br>
-                    /* Margin is outside of the element in CSS */<br>
-                    <b>margin: 40px;</b><br>
-                    /* Border is added to the width and height of the element in CSS */<br>
-                    <b>border: 10px solid green;</b><br>
-                </p>
+      <section class="bm-section" id="box-model">
+        <div class="bm-wrapper">
+          <h1>CSS Box Model</h1>
+          <p>
+            /* Padding is inside of the element in CSS */<br />
+            <b>padding: 40px;</b><br />
+            /* Margin is outside of the element in CSS */<br />
+            <b>margin: 40px;</b><br />
+            /* Border is added to the width and height of the element in CSS
+            */<br />
+            <b>border: 10px solid green;</b><br />
+          </p>
+        </div>
+      </section>
+      <section class="flex-section" id="flexbox">
+        <div class="flex-wrapper">
+          <div class="flex-element flex-head">
+            <div><h1>Display: Flex</h1></div>
+          </div>
+          <div class="flex-bottom">
+            <div class="flex-element flex-left">
+              <div></div>
+              <div></div>
+              <div></div>
             </div>
-        </section>
-        <section class="flex-section" id="flexbox">
-            <div class="flex-wrapper">
-                <div class="flex-element flex-head">
-                    <div><h1>Display: Flex</h1></div>
-                </div>
-                <div class="flex-bottom">
-                    <div class="flex-element flex-left">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="flex-element flex-right">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
+            <div class="flex-element flex-right">
+              <div></div>
+              <div></div>
+              <div></div>
             </div>
-        </section>
-        <section id="positioning-elements"></section>
-        <section id="heading-usage"></section>
-        <section id="simple-javascript"></section>
+          </div>
+        </div>
+      </section>
+      <section class="positioning-section" id="positioning-elements">
+        <div class="positioning-wrapper">
+          <h1>Positioning Elements</h1>
+          <div class="circle" style="left: 10px; bottom: 10px"></div>
+          <div class="centersq" style="top: 150px"></div>
+          <div class="circle" style="bottom: 50px; right: 30px"></div>
+          <div class="rightsq" style="bottom: 0; right: 0"></div>
+          <div class="circle" style="top: 20px; right: 20px"></div>
+        </div>
+      </section>
+      <section class="heading-section" id="heading-usage">
+        <div class="heading-wrapper">
+          <h1>Proper Heading Usage (h1)</h1>
+          <p>
+            Quisquam rerum quia ducimus voluptatem id molestiae repellat. Vitae
+            tempora sed voluptatem ex fuga. Odio quo rerum ut. At quae expedita
+            aliquid aspernatur qui. Excepturi nam mollitia laborum. Consequuntur
+            ducimus magnam delectus cumque commodi explicabo.
+          </p>
+          <h2>A heading describes the content below it (h2)</h2>
+          <h3>Style of the text is not relevant (h3)</h3>
+          <h4>This could be another heading (h4)</h4>
+          <p>
+            Quisquam rerum quia ducimus voluptatem id molestiae repellat. Vitae
+            tempora sed voluptatem ex fuga. Odio quo rerum ut. At quae expedita
+            aliquid aspernatur qui. Excepturi nam mollitia laborum. Consequuntur
+            ducimus magnam delectus cumque commodi explicabo.
+          </p>
+          <h5></h5>
+          <h6></h6>
+        </div>
+      </section>
+      <section class="js-section" id="simple-javascript">
+        <div class="javascript-wrapper">
+            <h2>Simple Javascript</h2>
+            <div class="content-container">
+                <div class="counter">0</div> <button onclick="increaseCounterValue()" class="button">Click to increase</button>
+            </div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
-</body>
+    <footer>
+        <div>Owen Caldwell - S1, 2024</div>
+    </footer>
+  </body>
+  <script>
+    let counterValue = 0;
+    function increaseCounterValue() {
+        counterValue++;
+        const counterDiv = document.querySelector(".counter");
+        counterDiv.innerHTML = counterValue;
+        console.log(counterValue);
+    }
+</script>
 </html>
